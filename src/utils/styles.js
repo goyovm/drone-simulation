@@ -1,5 +1,4 @@
 import { makeStyles } from "@mui/styles";
-import { COLOR_SECONDARY } from "./constants";
 
 const cards = {
   flex: 1,

@@ -19,18 +19,16 @@ const InfoTable = ({ headers, data }) => {
               <TableCell key={key}>{item}</TableCell>
             ))}
           </TableRow>
-          <TableBody>
-            {data.map((row, keyRow) => (
-              <TableRow key={keyRow} style={{ width: "100%" }}>
-                {row.map((item, keyCell) => (
-                  <TableCell key={keyCell} style={{ width: "100%" }}>
-                    {item}
-                  </TableCell>
-                ))}
-              </TableRow>
-            ))}
-          </TableBody>
         </TableHead>
+        <TableBody>
+          {data.map((row, keyRow) => (
+            <TableRow key={keyRow}>
+              {row.map((item, keyCell) => (
+                <TableCell key={keyCell}>{item}</TableCell>
+              ))}
+            </TableRow>
+          ))}
+        </TableBody>
       </Table>
     </TableContainer>
   );

@@ -6,15 +6,18 @@ class Drone {
     this.trips = [];
   }
 
+  releaseAndRefuel() {
+    this.currentWeight = 0;
+    this.trips = [];
+  }
+
   addPackage(location) {
     if (
-      !location.isScheduled() &&
-      location.packageWeight <= this.currentWeight
+      location.scheduled === false &&
+      location.packageWeight <= this.maxWeight - this.currentWeight
     ) {
       this.trips.push(location);
-      location.setScheduled(true);
-      this.currentWeight += location.packageWeight;
-      this.trips.push(location);
+      this.currentWeight += Number(location.packageWeight);
       return true;
     } else {
       return false;
