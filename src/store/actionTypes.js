@@ -1,0 +1,1 @@
+export const APP_SET_COMPANY = "APP_SET_COMPANY";
