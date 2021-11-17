@@ -74,7 +74,6 @@ class Company {
         else this.observations = "";
         break;
       }
-      if (tripNumber === 10) return;
       tripNumber = tripNumber + 1;
     }
   }
